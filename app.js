@@ -1,21 +1,38 @@
-let names;
-let coutry;
-let p = document.getElementById("output")
-let nameChange = document.getElementById("nameChange");
-let coutryChange = document.getElementById("coutryChange");
+const bird = document.querySelector(".bird");
+let px = 0;
 
-nameChange.addEventListener("change", function(){
-    names = event.target.value;
-    changeInput();
-}
-)
-coutryChange.addEventListener("change", function(){
-    coutry = event.target.value;
-    changeInput();
-}
-)
-const changeInput = function() {
-    const text = `Je heet ${names} en je komt uit ${coutry}`;
-    p.textContent = text;
-}
+bird.addEventListener("click", function(){
+  
+    px = px + 50;
+    
+    bird.style.left = px + "px";
+})
 
+window.addEventListener("keydown", function(e){
+    console.log(e.key); 
+    if(e.key == "ArrowRight"){
+    px = px + 50;
+    bird.style.left = px + "px";
+    bird.src = "img/b-right.svg";
+    }
+
+    if(e.key == "ArrowLeft"){
+        px = px - 50;
+        bird.style.left = px + "px";
+        bird.src = "img/b-left.svg";
+        }
+
+    if(e.key == "ArrowUp"){
+            px = px + 50;
+            bird.style.bottom = px + "px";
+            bird.src = "img/b-up.svg";
+            }
+
+    if(e.key == "ArrowDown"){
+    px = px - 50;
+    bird.style.bottom = px + "px";
+    bird.src = "img/b-down.svg";
+    }
+
+
+})
