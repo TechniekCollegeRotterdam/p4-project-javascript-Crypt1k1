@@ -1,3 +1,4 @@
+// uitleg voor je code?
 document.addEventListener('DOMContentLoaded', () =>{
 const grid = document.querySelector(".grid")
 let squares = Array.from(document.querySelectorAll('.grid div'))
@@ -69,7 +70,7 @@ function moveDown() {
     currentPosition += width
     draw()
 }
-
+// leg je function uit (wel nice dat je meer comments dan mij hebt over het algemeen ik moet dit ook echt handhaven)
 function freeze(){
     if(current.some(index => squares[currentPosition + index +width].classList.contains('taken'))){
         current.forEach()
