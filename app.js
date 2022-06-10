@@ -7,6 +7,7 @@ const StartBtn = document.querySelector('#startButton')
     const  width = 10;
 
 // de figuren
+    //nice dat je al je figuren aanduid met de letter die erop lijkt.
 const lTetromino = [
     [1, width+1, width*2+1, 2],
     [width, width+1, width+2, width*2+2],
